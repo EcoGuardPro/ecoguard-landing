@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoGuard Property Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <img src="images/logo.png" alt="EcoGuard Logo" class="logo" />
+    <div class="hero-overlay">
+      <h1>EcoGuard Property Services</h1>
+      <p>Affordable. Reliable. Professional Property Care.</p>
+      <a href="#contact" class="btn">Request a Free Quote</a>
+    </div>
+  </header>
+
+  <div class="service-buttons">
+    <button onclick="selectService('Tree Felling')">🌳 Tree Felling</button>
+    <button onclick="selectService('Pest Control')">🐜 Pest Control</button>
+    <button onclick="selectService('Pool Cleaning')">💧 Pool Cleaning</button>
+    <button onclick="selectService('Deep Cleaning')">🧹 Deep Cleaning (Indoor & Outdoor)</button>
+  </div>
+  
+  
+
+  <section class="why">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>✅ Fast Turnaround</li>
+      <li>✅ Competitive Rates</li>
+      <li>✅ Free Quotes & Inspections</li>
+      <li>✅ Mobile Teams Across Gauteng</li>
+    </ul>
+  </section>
+  <form id="quote-form" action="mailto:ecoguardproservices@gmail.com" method="post" enctype="text/plain">
+    <h2>Request a Quote</h2>
+  
+    <label for="service">Type of Service:</label>
+    <select id="service" name="Service" required>
+      <option value="">Select a service</option>
+      <option value="Tree Felling">Tree Felling</option>
+      <option value="Pest Control">Pest Control</option>
+      <option value="Pool Cleaning">Pool Cleaning</option>
+      <option value="Deep Cleaning">Deep Cleaning (Indoor & Outdoor)</option>
+    </select>
+  
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="Name" required>
+  
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="Email" required>
+  
+    <label for="details">Additional Details:</label>
+    <textarea id="details" name="Details" rows="4" placeholder="Describe your service needs..."></textarea>
+  
+    <input type="submit" value="Send Request">
+  </form>
+  
+  
+  </section>
+  <script>
+    function selectService(serviceName) {
+      // Set the value of the dropdown
+      document.getElementById("service").value = serviceName;
+      
+      // Scroll to the form
+      document.getElementById("quote-form").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+  
+  <footer>
+    <p>&copy; 2025 EcoGuard Property Services. All rights reserved.</p>
+  </footer>
+</body>
+</html>
